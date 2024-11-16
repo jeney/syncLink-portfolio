@@ -21,6 +21,23 @@
     }
 }
 
+@media (max-width: 768px) {
+
+    .landingPage-container{
+        grid-template-columns: 1fr;
+    }
+    .landignPage-tools-images{
+        flex-direction: column;
+        
+    }
+    .project-card{
+        grid-template-columns: 1fr;
+    }
+    .project-card-header{
+        grid-column: span 1;
+    }
+}
+
 body{
     background: var(--dark-gradient);
     color: var(--white);
@@ -28,7 +45,6 @@ body{
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
-    margin: 0;
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -37,6 +53,24 @@ body{
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
+}
+
+.sectin-title{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 19.36px;
+    text-align: center;
+}
+
+.btn-primary {
+    color:var(--white);
+    max-width: 200px;
+    min-height: 50px;
+    font-size: 16px;
+    font-weight: 400px;
+    border-radius: 5px;
+    text-transform: uppercase;
 }
 
 /* Navigation */
@@ -68,6 +102,7 @@ body{
     margin: 30px;
     font-weight: 900px;
 }
+
 
 
 /*  Main page - Cards */
@@ -158,25 +193,18 @@ body{
     font-weight: 400px;
 }
 
-@media (max-width: 768px) {
 
-    .landingPage-container{
-        grid-template-columns: 1fr;
-    }
-    .landignPage-tools-images{
-        flex-direction: column;
-        
-    }
-}
 
 /* TOOLS SECTION */
+
+
 .landignPage-tools{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 60px ;
-    margin-top: 60px;
+    gap: 7vh; 
+    margin-bottom: 60px;
 }
 
 .landignPage-tools h1{ 
@@ -200,14 +228,99 @@ body{
 }
 /* Projects section */
 
-.landingPage-projects{
+/* Projects container */
+.projects-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 60px ;
-    margin-top: 180px;
-    padding: 0px 106px 0px 106px;
+    gap: 7vh;
+    margin-top: 22vh;
+    padding: 0px 10vh 0px 10vh;
 
 }
 
+.landingPage-projects h1{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 19.36px;
+    text-align: center;
+}
+
+/* Project card */
+.project-card{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, minmax(fit-content, 900px));
+    gap: 40px;
+    padding: 40px 50px 40px 50px;
+}
+
+.project-card-header{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    grid-column: span 2;
+    align-items: center;
+}
+
+.project-card-header h1{
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 38.73px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.project-card-header h2{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+} 
+
+.project-card p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    align-self: flex-start;
+
+}
+
+.project-card button{
+    grid-column-start: 2;
+    align-self: flex-end ;
+}
+
+.project-card img{
+    max-width: 900px;
+    max-height: 345px;
+    grid-row: span 2;
+}
+
+/* Projects button see more */
+
+.projects-container button{
+    min-width: 200px;
+    max-height: 50px;
+}
+
+/*  CUSTOM BUILD WEBSITES*/
+
+.custom-build-websites{
+      
+}
+
+.custom-build-websites ::-webkit-scrollbar{
+
+}
+
+
+/* TESTIMONIALS */
