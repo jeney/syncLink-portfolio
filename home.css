@@ -25,6 +25,27 @@ body{
     background: var(--dark-gradient);
     color: var(--white);
     font-family: Inter;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+/* Navigation */
+.navigaton{
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem 3.5rem;;
+    color: var(--white);
+    text-decoration: none;
 }
 
 /* Sliding text */
@@ -32,13 +53,13 @@ body{
 .landingPage-heroText{
     overflow: hidden;
     white-space: nowrap;
-    padding: 60px 0px;
+    padding: 60px 0px 60px  0px;
     
 }
 
 .heroText-slide{
     display: inline-block;
-    /* animation: 32s slide infinite linear; */
+    animation: 32s slide infinite linear;
 }
 
 .heroText-slide h1{
@@ -54,27 +75,139 @@ body{
 .landingPage-container{
     display: grid;
     grid-template-columns: 4fr 1fr;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    gap: 2rem;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 107px 180px 107px;
+
 }
 
 .card{
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(212, 212, 212, 0.5);
-    border-radius: 5px;
+    border-radius: 10px;
     backdrop-filter: blur(20px);
     box-shadow: 20px 20px 40px 0px rgba(0, 0, 0, 0.25);
 }
 
-
+/* Description card */
 .landignPage-description{
-
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 50px 40px 50px;
+    gap: 40px;
 }
+
+.landignPage-description h2{
+    font-size: 32px;
+    font-weight: 700px;
+    line-height: 39px;
+}
+
+.landignPage-description p{
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 19px;
+    margin-bottom: 83px;
+}
+
+.contact-btn{
+    color:var(--white);
+    max-width: 200px;
+    min-height: 50px;
+    font-size: 16px;
+    font-weight: 400px;
+    border-radius: 5px;
+}
+/* Client card */
+
 .landignPage-clients{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+.landignPage-clients h1{
+    font-size: 64px;
+    font-weight: 900px;
+}
+
+.landignPage-clients span{
+    font-size: 16px;
+    font-weight: 400px;
+}
+
+/* Rewiews card */
+
 .landignPage-rewiews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.landignPage-rewiews h1{
+    font-size: 64px;
+    font-weight: 900px;
+}
+
+.landignPage-rewiews span{
+    font-size: 16px;
+    font-weight: 400px;
+}
+
+@media (max-width: 768px) {
+
+    .landingPage-container{
+        grid-template-columns: 1fr;
+    }
+    .landignPage-tools-images{
+        flex-direction: column;
+        
+    }
+}
+
+/* TOOLS SECTION */
+.landignPage-tools{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px ;
+    margin-top: 60px;
+}
+
+.landignPage-tools h1{ 
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 19.36px;
+    text-align: center;
+    
+}
+
+.landignPage-tools-images {
+    display: flex;
+    gap: 80px;
+    
+}
+
+.landignPage-tools-images img{
+    max-width: 245px;
+    max-height: 100px; 
+}
+/* Projects section */
+
+.landingPage-projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px ;
+    margin-top: 180px;
+    padding: 0px 106px 0px 106px;
 
 }
 
