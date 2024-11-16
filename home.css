@@ -21,22 +21,7 @@
     }
 }
 
-@media (max-width: 768px) {
 
-    .landingPage-container{
-        grid-template-columns: 1fr;
-    }
-    .landignPage-tools-images{
-        flex-direction: column;
-        
-    }
-    .project-card{
-        grid-template-columns: 1fr;
-    }
-    .project-card-header{
-        grid-column: span 1;
-    }
-}
 
 body{
     background: var(--dark-gradient);
@@ -100,7 +85,7 @@ body{
     display: inline;
     font-size: 200px;
     margin: 30px;
-    font-weight: 900px;
+    font-weight: 900;
 }
 
 
@@ -136,13 +121,13 @@ body{
 
 .landignPage-description h2{
     font-size: 32px;
-    font-weight: 700px;
+    font-weight: 700;
     line-height: 39px;
 }
 
 .landignPage-description p{
     font-size: 16px;
-    font-weight: 400px;
+    font-weight: 400;
     line-height: 19px;
     margin-bottom: 83px;
 }
@@ -152,7 +137,7 @@ body{
     max-width: 200px;
     min-height: 50px;
     font-size: 16px;
-    font-weight: 400px;
+    font-weight: 400;
     border-radius: 5px;
 }
 /* Client card */
@@ -166,12 +151,12 @@ body{
 
 .landignPage-clients h1{
     font-size: 64px;
-    font-weight: 900px;
+    font-weight: 900;
 }
 
 .landignPage-clients span{
     font-size: 16px;
-    font-weight: 400px;
+    font-weight: 400;
 }
 
 /* Rewiews card */
@@ -185,12 +170,12 @@ body{
 
 .landignPage-rewiews h1{
     font-size: 64px;
-    font-weight: 900px;
+    font-weight: 900;
 }
 
 .landignPage-rewiews span{
     font-size: 16px;
-    font-weight: 400px;
+    font-weight: 400;
 }
 
 
@@ -315,12 +300,140 @@ body{
 /*  CUSTOM BUILD WEBSITES*/
 
 .custom-build-websites{
-      
+    display: grid;
+    padding:  106px 266px 180px 266px;
+    grid-template-columns: 1fr 9fr;
+    align-items: center;
+}
+.custom-build-websites-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.custom-build-websites h1{
+    font-family: Inter;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 58.09px;
+    padding: 136px;
 }
 
-.custom-build-websites ::-webkit-scrollbar{
-
+.slider{
+    height: 18vh;
+    border-radius: 20px;
+    max-width: 5vh;
+    align-items: center;
+    justify-content: center;
+    padding-left: 11px;
+    padding-top: 20px;
 }
 
 
 /* TESTIMONIALS */
+
+.testimonials-container{
+    display: grid;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding:  106px 60px 180px 60px;
+}
+
+.testimonial-card{
+ display: flex;
+ flex-direction: column;
+ padding: 5vh;
+}
+
+.testimonial-card p{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    padding: 10px;
+    
+}
+
+.testimonial-card-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10px;
+    gap: 40px;
+}
+.testimonial-card-profile-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.testimonial-card img{
+    max-width: 75px;
+    max-height: 75px;
+}
+.testimonial-card h1{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 19.36px;
+
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+.testimonial-card h2{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+
+}
+
+
+/* FOOTER */
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* justify-content: space-evenly; */
+    
+    background: rgba(30, 0, 201, 1);
+}
+
+footer h1{
+    font-family: Inter;
+    padding: 105px 40px  105px 40px;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 19.36px;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+
+    .landingPage-container{
+        grid-template-columns: 1fr;
+    }
+    .landignPage-tools-images{
+        flex-direction: column;
+        
+    }
+    .project-card{
+        grid-template-columns: 1fr;
+    }
+    .project-card-header{
+        grid-column: span 1;
+    }
+}
