@@ -33,6 +33,7 @@ body{
     overflow: hidden;
     white-space: nowrap;
     padding: 60px 0px;
+    
 }
 
 .heroText-slide{
@@ -44,6 +45,7 @@ body{
     display: inline;
     font-size: 200px;
     margin: 30px;
+    font-weight: 900px;
 }
 
 
