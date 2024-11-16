@@ -285,6 +285,7 @@ body{
 }
 
 .project-card img{
+    align-self: flex-start;
     max-width: 900px;
     max-height: 345px;
     grid-row: span 2;
@@ -379,7 +380,7 @@ body{
 }
 .testimonial-card h1{
     font-family: Inter;
-    font-size: 16px;
+    font-size: 16px;    
     font-weight: 900;
     line-height: 19.36px;
 
