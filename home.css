@@ -15,10 +15,16 @@
 @keyframes backgrond-transition-scroll {
   from {
     background: var(--light-gradient);
-  }
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
   to
   {
     background: var(--dark-gradient);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
   }
 }
 
@@ -47,7 +53,7 @@ body{
     scrollbar-width: none;
     -ms-overflow-style: none;
     animation: backgrond-transition-scroll step-end;
-    animation-timeline: view(100px);
+    animation-timeline: view(-700px);
 }
 
 ::-webkit-scrollbar {
