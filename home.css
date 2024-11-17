@@ -1,7 +1,7 @@
 :root{
     --dark-gradient:radial-gradient(100% 237.07% at 100% 100%, #1E00C9 0%, #34323E 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     --white:rgba(255, 255, 255, 1);
-    
+    --light-gradient: radial-gradient(100% 237.07% at 100% 100%, #1E00C9 0%, #D0C8FF 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     
 }
 
@@ -10,7 +10,20 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* On scroll dark mode animation */
 
+@keyframes scroll {
+  from {
+    background-color: var(--light-gradient);
+  }
+  to
+  {
+    background-color: var(--dark-gradient);
+  }
+}
+
+
+/* Text rotation animation */
 @keyframes slide {
    from
     {
@@ -40,12 +53,16 @@ body{
     background: transparent;
 }
 
+/* Style for the section title */
+
 .sectin-title{
     font-family: Inter;
     font-size: 16px;
     font-weight: 900;
     line-height: 19.36px;
     text-align: center;
+    text-transform: uppercase;
+    padding: 15vh 0vh 10vh 0vh;
 }
 
 .btn-primary {
@@ -189,7 +206,7 @@ body{
     align-items: center;
     justify-content: center;
     gap: 7vh; 
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
 }
 
 .landignPage-tools h1{ 
@@ -219,9 +236,11 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 7vh;
+    /* gap: 7vh; */
     margin-top: 22vh;
     padding: 0px 10vh 0px 10vh;
+    animation: scroll linear;
+    animation-timeline: scroll(y);
 
 }
 
@@ -241,6 +260,7 @@ body{
     grid-template-columns: repeat(2, minmax(fit-content, 900px));
     gap: 40px;
     padding: 40px 50px 40px 50px;
+    margin-bottom: 7vh;
 }
 
 .project-card-header{
@@ -306,6 +326,25 @@ body{
     grid-template-columns: 1fr 9fr;
     align-items: center;
 }
+
+.custom-build-websites h2{
+    grid-row-start: 1;
+    grid-column: span 2;
+    padding: 15vh 0vh 10vh 0vh;
+}
+
+
+.slider{
+    height: 18vh;
+    border-radius: 20px;
+    max-width: 5vh;
+    align-items: center;
+    justify-content: center;
+    padding-left: 11px;
+    padding-top: 20px;
+}
+
+
 .custom-build-websites-box{
     display: flex;
     align-items: center;
@@ -319,16 +358,6 @@ body{
     padding: 136px;
 }
 
-.slider{
-    height: 18vh;
-    border-radius: 20px;
-    max-width: 5vh;
-    align-items: center;
-    justify-content: center;
-    padding-left: 11px;
-    padding-top: 20px;
-}
-
 
 /* TESTIMONIALS */
 
@@ -338,7 +367,7 @@ body{
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr 1fr;
-    padding:  106px 60px 180px 60px;
+    padding: 0vh 10vh 30vh 10vh;
 }
 
 .testimonial-card{
@@ -364,7 +393,7 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 10px;
+    padding-top: 5vh;
     gap: 40px;
 }
 .testimonial-card-profile-description{
@@ -414,13 +443,14 @@ footer{
 
 footer h1{
     font-family: Inter;
-    padding: 105px 40px  105px 40px;
+    padding: 52px 40px  52px 40px;
     font-size: 16px;
     font-weight: 900;
     line-height: 19.36px;
     text-align: center;
 }
 
+/* RESPONSIVE */
 
 @media (max-width: 768px) {
 
@@ -436,5 +466,8 @@ footer h1{
     }
     .project-card-header{
         grid-column: span 1;
+    }
+    .testimonials-container{
+        grid-column: 1fr;
     }
 }
