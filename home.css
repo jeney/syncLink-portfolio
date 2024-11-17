@@ -12,13 +12,13 @@
 }
 /* On scroll dark mode animation */
 
-@keyframes scroll {
+@keyframes backgrond-transition-scroll {
   from {
-    background-color: var(--light-gradient);
+    background: var(--light-gradient);
   }
   to
   {
-    background-color: var(--dark-gradient);
+    background: var(--dark-gradient);
   }
 }
 
@@ -46,6 +46,8 @@ body{
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    animation: backgrond-transition-scroll step-end;
+    animation-timeline: view(100px);
 }
 
 ::-webkit-scrollbar {
@@ -79,9 +81,22 @@ body{
 .navigaton{
     display: flex;
     gap: 1.5rem;
-    padding: 1.5rem 3.5rem;;
+    padding: 0.8rem 2.5rem;
+    margin: 5vh 12vh 0vh 12vh;
     color: var(--white);
     text-decoration: none;
+    max-height: fit-content;
+}
+
+.navigaton a{
+    list-style: none;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    text-align: right;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
 }
 
 /* Sliding text */
@@ -89,7 +104,7 @@ body{
 .landingPage-heroText{
     overflow: hidden;
     white-space: nowrap;
-    padding: 60px 0px 60px  0px;
+    padding: 8vh 0px 8vh  0px;
     
 }
 
@@ -101,7 +116,6 @@ body{
 .heroText-slide h1{
     display: inline;
     font-size: 200px;
-    margin: 30px;
     font-weight: 900;
 }
 
@@ -114,7 +128,7 @@ body{
     grid-template-columns: 4fr 1fr;
     justify-content: center;
     gap: 40px;
-    padding: 60px 107px 180px 107px;
+    padding: 0px 107px 180px 107px;
 
 }
 
@@ -239,9 +253,6 @@ body{
     /* gap: 7vh; */
     margin-top: 22vh;
     padding: 0px 10vh 0px 10vh;
-    animation: scroll linear;
-    animation-timeline: scroll(y);
-
 }
 
 .landingPage-projects h1{
