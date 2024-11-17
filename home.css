@@ -81,6 +81,11 @@ body{
     font-weight: 400px;
     border-radius: 5px;
     text-transform: uppercase;
+    
+}
+
+.btn-primary:hover{
+    cursor: pointer;
 }
 
 /* Navigation */
